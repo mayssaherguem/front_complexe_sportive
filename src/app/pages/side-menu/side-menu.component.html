@@ -1,0 +1,36 @@
+<div class="d-flex flex-column justify-content-between align-items-center" style="width: 100%; height: 100%; background-color: #fbfbfb;  padding: 4%; border-radius: 0 5px 5px 0; " > 
+<!-- background: linear-gradient(to bottom, rgb(9 112 30), rgb(31, 171, 59, 0.7)); -->
+<div class="d-flex flex-column justify-content-between align-items-center"  style="width: 100%;height: 80%;" >
+    
+    <div  (click)="navigate( '/dashboard' )" [ngClass]="classMenu('/dashboard')"  class=" d-flex justify-content-center align-items-center"  >
+      Dashboard
+      <!-- <img src="../../../assets/images/home.png" style="height: 100%; width: auto;"> -->
+    </div>
+
+    <div (click)="navigate( '/gestion_adherent' )" [ngClass]="classMenu('/gestion_adherent')"  class=" d-flex justify-content-center align-items-center "  >
+      Gestion Adhérents
+      <!-- <img src="../../../assets/images/home.png" style="height: 100%; width: auto;"> -->
+    </div>
+
+    <div  (click)="navigate( '/gestion_coach' )" [ngClass]="classMenu('/gestion_coach')" class=" d-flex justify-content-center align-items-center "  >
+      Gestion Coachs
+      <!-- <img src="../../../assets/images/home.png" style="height: 100%; width: auto;"> -->
+   </div>
+
+   <div (click)="navigate( '/planning' )" [ngClass]="classMenu('/planning')" class=" d-flex justify-content-center align-items-center "  >
+      Planning
+   </div>
+
+
+ 
+
+</div>
+
+<div class="d-flex flex-column justify-content-between align-items-center" style="width: 25%; height: 80%; ">
+
+
+</div>
+
+  
+
+</div>
