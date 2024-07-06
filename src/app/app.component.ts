@@ -57,6 +57,26 @@ export class AppComponent implements OnInit{
         {
           this.current = "Planning"
         }
+        else if(this.curr.includes('cours'))
+        {
+          this.current = "Gestion Cours"
+        }
+        else if(this.curr.includes('salle'))
+        {
+          this.current = "Gestion Salle"
+        }
+        else if(this.curr.includes('padel'))
+        {
+          this.current = "Gestion Terrain Paddel"
+        }
+        else if(this.curr.includes('foot'))
+        {
+          this.current = "Gestion Terrain Foot"
+        }
+        else if(this.curr.includes('planning'))
+        {
+          this.current = "Planning"
+        }
       }
     });
   }

@@ -8,24 +8,12 @@ import { GestionCoachsModule } from './gestion-coachs/gestion-coachs.module';
 import { PlanningModule } from './planning/planning.module';
 import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { GestionCoursModule } from './gestion-cours/gestion-cours.module';
+import { GestionPoolModule } from './gestion-pool/gestion-pool.module';
+import { GestionSalleModule } from './gestion-salle/gestion-salle.module';
+import { GestionTerrainFootModule } from './gestion-terrain-foot/gestion-terrain-foot.module';
+import { GestionTerrainPadelModule } from './gestion-terrain-padel/gestion-terrain-padel.module';
 
-import { DropDownButtonAllModule } from '@syncfusion/ej2-angular-splitbuttons';
-
-import { TreeViewModule } from '@syncfusion/ej2-angular-navigations';
-
-import { DropDownListAllModule, MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
-
-import { MaskedTextBoxModule, UploaderAllModule } from '@syncfusion/ej2-angular-inputs';
-
-import { ToolbarAllModule, ContextMenuAllModule } from '@syncfusion/ej2-angular-navigations';
-
-import { ButtonAllModule, CheckBoxAllModule, SwitchAllModule } from '@syncfusion/ej2-angular-buttons';
-
-import { DatePickerAllModule, TimePickerAllModule, DateTimePickerAllModule } from '@syncfusion/ej2-angular-calendars';
-
-import { NumericTextBoxAllModule, TextBoxAllModule } from '@syncfusion/ej2-angular-inputs';
-
-import { ScheduleAllModule, RecurrenceEditorAllModule } from '@syncfusion/ej2-angular-schedule';
 
 
 
@@ -40,7 +28,12 @@ import { ScheduleAllModule, RecurrenceEditorAllModule } from '@syncfusion/ej2-an
         DashboardModule,
         GestionAdhérentsModule,
         GestionCoachsModule,
-        PlanningModule
+        PlanningModule,
+        GestionCoursModule,
+        GestionPoolModule, 
+        GestionSalleModule,
+        GestionTerrainFootModule,
+        GestionTerrainPadelModule
     ],
     exports: [
     ]

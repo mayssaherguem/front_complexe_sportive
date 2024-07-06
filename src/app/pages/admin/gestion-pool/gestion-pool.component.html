@@ -1,0 +1,36 @@
+<!-- src/app/pages/gestion-pool/gestion-pool.component.html -->
+<div class="container">
+  <h2>Gestion des Pools</h2>
+  
+  <!-- Formulaire pour ajouter/modifier un pool -->
+  <!--<form (ngSubmit)="onSubmit()" #poolForm="ngForm">
+    <div class="form-group">
+      <label for="type">Type de Pool:</label>
+      <input type="text" id="type" required [(ngModel)]="pool.type" name="type" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="temp">Température:</label>
+      <input type="number" id="temp" required [(ngModel)]="pool.temp" name="temp" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="capacity">Capacité:</label>
+      <input type="checkbox" id="capacity" [(ngModel)]="pool.capacity" name="capacity" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-success">{{ isEdit ? 'Modifier' : 'Ajouter' }}</button>
+    <button type="button" *ngIf="isEdit" (click)="resetForm()" class="btn btn-secondary">Annuler</button>
+  </form>
+  
+  <div *ngIf="pools.length > 0">
+    <h3>Liste des Pools</h3>
+    <ul class="list-group">
+      <li *ngFor="let pool of pools" class="list-group-item">
+        Type: {{ pool.type }}, Température: {{ pool.temp }}, Capacité: {{ pool.capacity }}
+        <button class="btn btn-primary btn-sm" (click)="editPool(pool)">Modifier</button>
+        <button class="btn btn-danger btn-sm" (click)="deletePool(pool.id)">Supprimer</button>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="pools.length === 0">
+    <p>Aucun pool disponible.</p>
+  </div>-->
+</div>
