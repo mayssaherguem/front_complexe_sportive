@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  list_data= ["Nombre Adhérents", "Nombre Coach", "", "Revenues"]
   constructor() { }
 
   ngOnInit(): void {

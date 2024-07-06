@@ -8,6 +8,12 @@ import { DialogErrorComponent } from './dialog-error/dialog-error.component';
 import { LoginComponent } from './inputs/login/login.component';
 import { PassComponent } from './inputs/pass/pass.component';
 import { RoundBordersComponent } from './round-borders/round-borders.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
+import { StackAdherentComponent } from './charts/stack-adherent/stack-adherent.component';
+import { PieSexeComponent } from './charts/pie-sexe/pie-sexe.component';
+import { PieBarComponent } from './charts/pie-bar/pie-bar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +22,13 @@ import { RoundBordersComponent } from './round-borders/round-borders.component';
     DialogErrorComponent,
     LoginComponent,
     PassComponent,
-    RoundBordersComponent
+    RoundBordersComponent,
+    NavBarComponent,
+    SideMenuComponent,
+    PieChartComponent,
+    StackAdherentComponent,
+    PieSexeComponent,
+    PieBarComponent
     
   ],
   imports: [
@@ -30,8 +42,12 @@ import { RoundBordersComponent } from './round-borders/round-borders.component';
     DialogErrorComponent,
     LoginComponent,
     PassComponent,
-    RoundBordersComponent
-
+    RoundBordersComponent,
+    NavBarComponent,
+    SideMenuComponent,
+    PieChartComponent,
+    StackAdherentComponent,
+    PieSexeComponent
   ]
 })
 

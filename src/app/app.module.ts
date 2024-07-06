@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { pagesModule } from './pages/pages.module';
-import { SideMenuComponent } from './pages/side-menu/side-menu.component';
 import { FormsModule } from '@angular/forms';
-import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { BSMenuService } from './services/BSMenu.service';
@@ -17,13 +15,29 @@ import { SharedModule } from './shared/shared.module';
 import { DialogMessageService } from './services/dialog-message.service';
 import { DialogErrorService } from './services/dialog-error.service';
 import { CommonModule } from '@angular/common';
+import { DropDownButtonAllModule } from '@syncfusion/ej2-angular-splitbuttons';
+
+import { TreeViewModule } from '@syncfusion/ej2-angular-navigations';
+
+import { DropDownListAllModule, MultiSelectAllModule } from '@syncfusion/ej2-angular-dropdowns';
+
+import { MaskedTextBoxModule, UploaderAllModule } from '@syncfusion/ej2-angular-inputs';
+
+import { ToolbarAllModule, ContextMenuAllModule } from '@syncfusion/ej2-angular-navigations';
+
+import { ButtonAllModule, CheckBoxAllModule, SwitchAllModule } from '@syncfusion/ej2-angular-buttons';
+
+import { DatePickerAllModule, TimePickerAllModule, DateTimePickerAllModule } from '@syncfusion/ej2-angular-calendars';
+
+import { NumericTextBoxAllModule, TextBoxAllModule } from '@syncfusion/ej2-angular-inputs';
+
+import { ScheduleAllModule, RecurrenceEditorAllModule } from '@syncfusion/ej2-angular-schedule';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
     IconComponent,
-    SideMenuComponent
   ],
   imports: [
     CommonModule,
@@ -38,8 +52,25 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule ,
     MatSelectModule,
     MatFormFieldModule,
-    SharedModule
-    
+    SharedModule,
+    TreeViewModule,
+    DropDownListAllModule, 
+    MultiSelectAllModule,
+    DropDownButtonAllModule,
+    MaskedTextBoxModule, 
+    UploaderAllModule,
+    ToolbarAllModule, 
+    ContextMenuAllModule,
+    ButtonAllModule, 
+    CheckBoxAllModule, 
+    SwitchAllModule,
+    DatePickerAllModule, 
+    TimePickerAllModule, 
+    DateTimePickerAllModule,
+    NumericTextBoxAllModule, 
+    TextBoxAllModule,
+    ScheduleAllModule, 
+    RecurrenceEditorAllModule
   ],
   providers: [
     BSMenuService,

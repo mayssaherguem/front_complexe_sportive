@@ -129,7 +129,7 @@ export class GestionAdhérentsComponent implements OnInit, AfterViewInit {
     let baseUrl = "http://localhost:8088/getList_players";
       let h = { headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')}
       let body = new URLSearchParams();
-      this._http.post(baseUrl,body.toString(),h)
+      this._http.post(/*baseUrl,*/body.toString(),h)
       //.pipe(retry(3),catchError(this.dialog_error.handleError.bind(this)))
       .subscribe((next : any) =>
       {
@@ -166,5 +166,11 @@ export class GestionAdhérentsComponent implements OnInit, AfterViewInit {
       payment: 'non payé'
     },
   ]
+
+  current="Gestion Adherents"
+  toggleMenu(event)
+  {
+
+  }
 
 }
