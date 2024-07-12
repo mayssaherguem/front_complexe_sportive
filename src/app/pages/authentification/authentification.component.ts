@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, retry } from 'rxjs';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { DialogErrorService } from 'src/app/services/dialog-error.service';
+import { GetFromBackendService } from 'src/app/services/getFromBackend.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -29,7 +30,8 @@ export class AuthentificationComponent implements OnInit, AfterViewInit {
   currentRoute;
   constructor(private router : Router,private overlay: OverlayContainer,
               private _http:HttpClient, private dialog_error:DialogErrorService,
-              public authService: AuthenticationService, private route: ActivatedRoute)
+              public authService: AuthenticationService, private route: ActivatedRoute,
+              public fromBack: GetFromBackendService)
   { 
     this.route.url.subscribe(url => {
       console.log('URL:', url)
@@ -117,19 +119,14 @@ export class AuthentificationComponent implements OnInit, AfterViewInit {
     }
     else
     {
-      let baseUrl = "http://localhost:8088/Authentification";
-      let h = { headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')}
-
-      let body = new URLSearchParams();
-      body.set('login', this.login);
-      body.set('password',this.password);
-      this.authService.login(baseUrl, body, h)
+     
+      this.fromBack.autentificate(this.login, this.password)
       
       .pipe(retry(1),catchError(this.dialog_error.handleError.bind(this))).subscribe((next : any) =>
       {
         console.log(next);
 
-        if(next.msg=="notok")
+        /*if(next.msg=="notok")
         {
           // this.loadingSpinner.closeDialog();
           this.dialog_error.openDialog("Not OK");
@@ -181,7 +178,7 @@ export class AuthentificationComponent implements OnInit, AfterViewInit {
           this.dialog_error.openDialog("Erreur connexion BDD");
           this.showAuth=false;
           return;
-        }
+        }*/
 
       })
     }

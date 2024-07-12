@@ -79,9 +79,13 @@ export class GestionAdhérentsComponent implements OnInit, AfterViewInit {
       },
 
       columns: {
-        name:{
+        lastname:{
           type:'text',
-          title:"Nom & Prénom",
+          title:"Nom",
+        },
+        firstname:{
+          type:'text',
+          title:"Prénom",
         },
         date_birth:{
           type:'text',

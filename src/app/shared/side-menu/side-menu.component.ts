@@ -169,7 +169,6 @@ export class SideMenuComponent {
 
   classMenu(url)
   { 
-    console.log(this.router.url);
     
     return this.router.url === url ? "selected_button" : "custom-button";
   }

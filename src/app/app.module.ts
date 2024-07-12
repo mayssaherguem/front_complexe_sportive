@@ -32,7 +32,12 @@ import { DatePickerAllModule, TimePickerAllModule, DateTimePickerAllModule } fro
 import { NumericTextBoxAllModule, TextBoxAllModule } from '@syncfusion/ej2-angular-inputs';
 
 import { ScheduleAllModule, RecurrenceEditorAllModule } from '@syncfusion/ej2-angular-schedule';
-
+import { GetFromBackendService } from './services/getFromBackend.service';
+import { environment } from 'src/environments/environment';
+import { ConfigurationHelper } from './services/ConfigurationHelper';
+export function initConfig(configService: ConfigurationHelper) {
+  return () => configService.load(environment, 'assets/config/config.json');
+}
 
 @NgModule({
   declarations: [
@@ -76,6 +81,9 @@ import { ScheduleAllModule, RecurrenceEditorAllModule } from '@syncfusion/ej2-an
     BSMenuService,
     DialogMessageService,
     DialogErrorService,
+    GetFromBackendService,
+    {provide: APP_INITIALIZER, useFactory: initConfig, deps: [ConfigurationHelper], multi: true },
+  
   ],
   bootstrap: [AppComponent]
 })
